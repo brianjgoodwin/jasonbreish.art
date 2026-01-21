@@ -17,7 +17,7 @@ a:hover {
   color: #99ccff;
 }
 
-/* Gallery horizontal scroll */
+/* Gallery horizontal scroll with auto-rotate */
 figure[data-ratio] ul {
   display: flex !important;
   flex-direction: row !important;
