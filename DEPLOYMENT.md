@@ -1,7 +1,7 @@
-# Jason Briesh Portfolio - Deployment Documentation
+# Jason Breish Portfolio - Deployment Documentation
 
 ## Project Overview
-Portfolio website for Jason Briesh built with Kirby CMS 5.2.2
+Portfolio website for Jason Breish built with Kirby CMS 5.2.2
 **Live URL**: https://jason.brianjgoodwin.dev
 **Repository**: https://github.com/brianjgoodwin/jasonbreish.art (private)
 
@@ -179,7 +179,7 @@ Note: Code is already backed up in GitHub
 
 ## Contact & Support
 
-**Client**: Jason Briesh
+**Client**: Jason Breish
 **Developer**: Brian Goodwin (brianjgoodwin@gmail.com)
 **Kirby Docs**: https://getkirby.com/docs
 **Server Provider**: Hetzner Cloud
