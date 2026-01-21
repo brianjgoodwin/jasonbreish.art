@@ -8,8 +8,11 @@ columns:
         type: fields
         fields:
           text:
-            type: textarea
-            size: huge
+            type: blocks
+            fieldsets:
+              - markdown
+              - image
+              - gallery
   sidebar:
     width: 1/3
     sections:

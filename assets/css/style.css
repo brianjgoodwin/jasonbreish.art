@@ -1,0 +1,46 @@
+body {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+a {
+  color: #66b3ff;
+}
+
+a:hover {
+  color: #99ccff;
+}
+
+/* Gallery horizontal scroll */
+figure[data-ratio] ul {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 0 !important;
+  margin: 20px 0 !important;
+  list-style: none !important;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+figure[data-ratio] li {
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  display: block !important;
+  margin: 0 !important;
+}
+
+figure[data-ratio] img {
+  display: block;
+  height: 300px;
+  width: auto;
+  object-fit: cover;
+  border-radius: 4px;
+}
