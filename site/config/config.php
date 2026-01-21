@@ -1,5 +1,6 @@
 <?php
 
+// Production configuration
 return [
     'debug' => false,
     'panel' => [
