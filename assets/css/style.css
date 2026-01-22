@@ -51,7 +51,7 @@ figure.gallery-block li {
 
 figure.gallery-block img {
   display: block;
-  height: 300px;
+  height: 500px;
   width: auto;
   object-fit: cover;
   border-radius: 4px;
