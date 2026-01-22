@@ -19,29 +19,112 @@ a:hover {
 }
 
 /* Gallery horizontal scroll with auto-rotate */
-figure[data-ratio] ul {
+figure.gallery-block {
+  position: relative;
+  margin: 20px 0;
+}
+
+figure.gallery-block ul {
   display: flex !important;
   flex-direction: row !important;
   gap: 16px;
   overflow-x: auto;
   padding: 0 !important;
-  margin: 20px 0 !important;
+  margin: 0 !important;
   list-style: none !important;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
 }
 
-figure[data-ratio] li {
+figure.gallery-block ul::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+figure.gallery-block li {
   flex-shrink: 0;
   scroll-snap-align: start;
   display: block !important;
   margin: 0 !important;
 }
 
-figure[data-ratio] img {
+figure.gallery-block img {
   display: block;
   height: 300px;
   width: auto;
   object-fit: cover;
   border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+figure.gallery-block a.glightbox {
+  display: block;
+  line-height: 0;
+}
+
+figure.gallery-block img:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+/* Gallery navigation controls */
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  pointer-events: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  z-index: 10;
+}
+
+.gallery-nav-btn {
+  pointer-events: auto;
+  background: rgba(26, 26, 26, 0.8);
+  border: 2px solid #66b3ff;
+  color: #66b3ff;
+  font-size: 32px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  line-height: 1;
+  padding: 0;
+  backdrop-filter: blur(4px);
+}
+
+.gallery-nav-btn:hover {
+  background: #66b3ff;
+  color: #1a1a1a;
+  transform: scale(1.1);
+}
+
+.gallery-nav-btn:active {
+  transform: scale(0.95);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  figure.gallery-block img {
+    height: 250px;
+  }
+
+  .gallery-nav-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 24px;
+  }
+
+  .gallery-nav {
+    padding: 0 5px;
+  }
 }

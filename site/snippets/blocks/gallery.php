@@ -3,10 +3,10 @@
 $caption         = $block->caption();
 $crop            = $block->crop()->isTrue();
 $ratio           = $block->ratio()->or('auto');
-$lightbox        = $block->lightbox()->toBool() ?? true;
-$autorotate      = $block->autorotate()->toBool() ?? true;
-$rotateInterval  = $block->rotateInterval()->toInt() ?? 4;
-$showNavigation  = $block->showNavigation()->toBool() ?? true;
+$lightbox        = $block->lightbox()->isNotEmpty() ? $block->lightbox()->toBool() : true;
+$autorotate      = $block->autorotate()->isNotEmpty() ? $block->autorotate()->toBool() : true;
+$rotateInterval  = $block->rotateInterval()->isNotEmpty() ? $block->rotateInterval()->toInt() : 4;
+$showNavigation  = $block->showNavigation()->isNotEmpty() ? $block->showNavigation()->toBool() : true;
 ?>
 <figure<?= Html::attr([
   'data-ratio' => $ratio,
