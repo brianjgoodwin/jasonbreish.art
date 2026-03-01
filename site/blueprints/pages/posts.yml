@@ -1,0 +1,23 @@
+title: Posts
+icon: 📝
+
+columns:
+  main:
+    width: 2/3
+    sections:
+      fields:
+        type: fields
+        fields:
+          text:
+            label: Intro
+            type: textarea
+      articles:
+        label: Articles
+        type: pages
+        template: article
+        sortBy: date desc
+  sidebar:
+    width: 1/3
+    sections:
+      files:
+        type: files

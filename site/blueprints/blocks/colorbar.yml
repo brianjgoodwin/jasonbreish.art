@@ -1,0 +1,20 @@
+name: Color Bar
+icon: palette
+preview: colorbar
+fields:
+  color:
+    label: Background Color
+    type: text
+    default: "#e0e0e0"
+    width: 1/2
+    help: Enter a hex color (e.g., #ff5733) or color name
+  height:
+    label: Bar Height
+    type: select
+    default: medium
+    width: 1/2
+    options:
+      small: Small (2rem)
+      medium: Medium (4rem)
+      large: Large (8rem)
+      xlarge: Extra Large (12rem)

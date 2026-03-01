@@ -1,0 +1,20 @@
+title: Gallery Image
+
+fields:
+  alt:
+    label: Alt Text
+    type: text
+    help: Description of the image for accessibility
+    placeholder: e.g., "Abstract painting with blue and red tones"
+  caption:
+    label: Caption
+    type: writer
+    icon: text
+    inline: true
+    help: Optional caption for the image
+  link:
+    label: Link
+    type: url
+    help: Optional URL to link this image to
+    pattern: ^https?://.*
+    placeholder: https://example.com
