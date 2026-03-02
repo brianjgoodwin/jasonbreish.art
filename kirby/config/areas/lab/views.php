@@ -158,7 +158,7 @@ return [
 			$example  = $category->example($id, $tab);
 			$props    = $example->props();
 			$vue      = $example->vue();
-			$compiler = App::instance()->option('panel.vue.compiler', true);
+			$compiler = App::instance()->option('panel.vue.compiler', false);
 
 			if ($doc = $props['docs'] ?? null) {
 				$doc = Doc::factory($doc);

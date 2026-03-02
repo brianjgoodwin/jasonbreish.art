@@ -35,9 +35,9 @@ DEPLOYMENT.md
 
 # Accounts
 # ---------------
-# TEMPORARILY ENABLED - Remove this comment and restore ignores after push
-# /site/accounts/*
-# !/site/accounts/index.html
+
+/site/accounts/*
+!/site/accounts/index.html
 
 # Sessions
 # ---------------

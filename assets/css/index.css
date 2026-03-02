@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;600&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +24,8 @@
   --color-code-aqua:        #8abeb7;
   --color-code-blue:        #7e9abf;
   --color-code-purple:      #b294bb;
-  --font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 
@@ -75,14 +78,20 @@ small {
   justify-content: space-between;
   margin-right: -1rem;
   margin-left: -1rem;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 .logo {
   padding: 1rem;
   display: flex;
   align-items: center;
-  font-weight: 600;
+  font-family: var(--font-family-serif);
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 400;
   cursor: pointer;
 }
 
@@ -92,9 +101,23 @@ small {
 .menu a {
   padding: 1rem;
   display: block;
+  position: relative;
+  transition: opacity 0.2s ease;
+}
+.menu a:hover {
+  opacity: 0.6;
 }
 .menu a[aria-current] {
-  text-decoration: underline;
+  text-decoration: none;
+}
+.menu a[aria-current]::after {
+  content: '';
+  position: absolute;
+  bottom: 0.75rem;
+  left: 1rem;
+  right: 1rem;
+  height: 1px;
+  background: currentColor;
 }
 
 .social {
@@ -130,9 +153,11 @@ small {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-serif);
   font-size: inherit;
   font-weight: inherit;
   line-height: inherit;
+  letter-spacing: -0.02em;
 }
 
 .text {
@@ -175,18 +200,23 @@ h1, h2, h3, h4, h5, h6 {
 .text h1,
 .h1,
 .intro {
-  font-size: 2rem;
+  font-size: 3.5rem;
+  font-weight: 400;
+  letter-spacing: -0.03em;
   margin-bottom: 3rem;
-  line-height: 1.25em;
+  line-height: 1.2;
 }
 .text h2,
 .h2 {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
   margin-bottom: 1.25rem;
+  margin-top: 3rem;
 }
 .text h3,
 .h3 {
+  font-size: 1.25rem;
   font-weight: 600;
 }
 .text .codeblock {
@@ -264,6 +294,7 @@ hr {
 
 .intro {
   max-width: 40rem;
+  margin-bottom: 4.5rem;
 }
 .intro *:not(:last-child) {
   margin-bottom: 1em;
@@ -314,6 +345,70 @@ hr {
 .video-caption {
   padding-top: .75rem;
   line-height: 1.5em;
+}
+
+/* Image size variants - override default .img styles */
+.img.img-small {
+  max-width: 200px;
+  padding-bottom: 0 !important;
+  background: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+.img.img-small img {
+  position: static !important;
+  width: 100%;
+  height: auto;
+}
+
+.img.img-medium {
+  max-width: 400px;
+  padding-bottom: 0 !important;
+  background: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+.img.img-medium img {
+  position: static !important;
+  width: 100%;
+  height: auto;
+}
+
+.img.img-large {
+  max-width: 600px;
+  padding-bottom: 0 !important;
+  background: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+.img.img-large img {
+  position: static !important;
+  width: 100%;
+  height: auto;
+}
+
+/* Circle shape - needs to override default img styles */
+.img.img-circle {
+  padding-bottom: 0 !important;
+  background: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+.img.img-circle img {
+  position: static !important;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+/* Disable lightbox styling for specific images */
+.text .no-lightbox img {
+  cursor: default !important;
+}
+.text .no-lightbox img:hover {
+  opacity: 1 !important;
 }
 
 .footer {

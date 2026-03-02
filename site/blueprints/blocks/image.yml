@@ -1,0 +1,54 @@
+name: Image
+icon: image
+preview: image
+fields:
+  image:
+    label: Image
+    type: files
+    multiple: false
+    uploads: image
+  alt:
+    label: Alt text
+    type: text
+  caption:
+    label: Caption
+    type: writer
+    inline: true
+  link:
+    label: Link
+    type: url
+  ratio:
+    label: Aspect Ratio
+    type: select
+    default: auto
+    options:
+      auto: Auto
+      square: Square (1:1)
+      landscape: Landscape (3:2)
+      portrait: Portrait (2:3)
+      wide: Wide (16:9)
+  crop:
+    label: Crop
+    type: toggle
+    default: false
+  size:
+    label: Size
+    type: select
+    default: full
+    options:
+      small: Small (200px max)
+      medium: Medium (400px max)
+      large: Large (600px max)
+      full: Full width
+  shape:
+    label: Shape
+    type: select
+    default: square
+    options:
+      square: Square
+      circle: Circle
+  noLightbox:
+    label: Disable lightbox
+    type: toggle
+    default: false
+    help: When enabled, clicking the image won't open the lightbox
