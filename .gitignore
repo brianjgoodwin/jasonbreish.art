@@ -22,6 +22,13 @@ Icon
 /.vscode
 /.idea
 
+# Content (managed via Panel on live site)
+# ---------------
+/content/*
+!/content/site.txt
+/vendor
+composer.lock
+
 # -------------SECURITY-------------
 # NEVER publish these files via Git!
 # -------------SECURITY-------------
